@@ -1,8 +1,8 @@
-package com.springboot.greetingapp.representaionclass;
+package com.springboot.greetingapp.model;
 
 public class Greeting {
-    private long id;
-    private String content;
+     long id;
+     String content;
 
     public Greeting(long id, String content) {
         this.id = id;
