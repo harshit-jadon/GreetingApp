@@ -1,15 +1,14 @@
 package com.springboot.greetingapp.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="GREETINGS")
 public class Greeting {
 
     @Id
+            @GeneratedValue(strategy = GenerationType.AUTO)
      long id;
      String content;
 
@@ -18,8 +17,7 @@ public class Greeting {
        content="";
     }
 
-    public Greeting(long id, String content) {
-        this.id = id;
+    public Greeting(String content) {
         this.content = content;
     }
 

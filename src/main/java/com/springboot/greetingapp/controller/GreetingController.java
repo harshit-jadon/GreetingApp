@@ -7,7 +7,7 @@ import com.springboot.greetingapp.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.List;
 
 @RestController
 @RequestMapping("/greetings")
@@ -24,5 +24,8 @@ public class GreetingController {
     public Greeting getById(@PathVariable Long id){
         return greetingService.getGreetingById(id);
     }
-
+    @GetMapping("/greetings")
+    public List<Greeting> getAllGreetings(){
+        return greetingService.getAll();
+    }
 }
