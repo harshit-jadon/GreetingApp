@@ -17,7 +17,7 @@ public class GreetingController {
 
     @GetMapping("")
     public Greeting greeting(@RequestParam(value="name",defaultValue="World") String name){
-    User user = new User(name,"harshit");
+    User user = new User(name);
     return greetingService.addGreeting(user);
     }
 
